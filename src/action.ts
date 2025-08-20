@@ -241,7 +241,7 @@ export default async function main() {
   }
 
   if (validTags.map((tag) => tag.name).includes(newTag)) {
-    core.info('This tag already exists. Skipping the tag creation.');
+    core.setFailed('This tag already exists. Skipping the tag creation.');
     return;
   }
 
